@@ -9,9 +9,9 @@ Each app demonstrates a different concept or container behavior.
 
 | App Name | Description | GitHub Folder Link |
 |----------|-------------|---------------------|
-| **myapp1** | Takes an command-line number argument and prints its square. | [App 1 Folder](https://github.com/Issacalv/Docker_Tutorial/tree/main/app1) |
+| **myapp1** | Takes a command-line number argument and prints its square. | [App 1 Folder](https://github.com/Issacalv/Docker_Tutorial/tree/main/app1) |
 | **myapp2** | Interactive program that asks for two numbers and prints their sum. | [App 2 Folder](https://github.com/Issacalv/Docker_Tutorial/tree/main/app2) |
-
+| **myapp3** | Flask web application served inside a Docker container. | [App 3 Folder](https://github.com/Issacalv/Docker_Tutorial/tree/main/app3) |
 
 ---
 
@@ -24,9 +24,13 @@ Docker_Tutorial/
 │   ├── app_1.py
 │   └── README.md
 │
-└── app2/
+├── app2/
+│   ├── Dockerfile
+│   ├── app_2.py
+│   └── README.md
+│
+└── app3/
     ├── Dockerfile
-    ├── app_2.py
+    ├── app_3.py
     └── README.md
-
 ```
