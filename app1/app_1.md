@@ -7,9 +7,10 @@ This guide walks through:
 - Viewing running + stopped containers (with names)  
 - Removing specific containers  
 - Removing all containers  
+- Removing the image (unbuilding)  
 - Example outputs  
 
-This guide assumes you have Docker Desktop running in the background
+This guide assumes you have Docker Desktop running in the background.
 
 ## Project Structure
 
@@ -157,7 +158,7 @@ Output:
 
 List containers again:
 
-```
+```bash
 docker ps -a
 ```
 
@@ -173,3 +174,43 @@ Remove it:
 ```bash
 docker rm jovial_yalow
 ```
+
+---
+
+## Removing the Image (Unbuilding the Docker Image)
+
+After verifying no containers are using it, you can remove the image.
+
+### List your images:
+
+```bash
+docker images
+```
+
+Example:
+
+```
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+myapp1       latest    45ea0e173df5   23 minutes ago   123MB
+```
+
+### Remove the image:
+
+```bash
+docker rmi myapp1
+```
+
+Example Output:
+
+```
+Untagged: myapp1:latest
+Deleted: sha256:45ea0e173df54aa96963a61f1a3b003ad8f0363f7c30d2237c0e2ca5721d6991
+```
+
+If Docker refuses removal due to stopped containers, first run:
+
+```bash
+docker rm $(docker ps -a -q)
+```
+
+Then remove the image again.
