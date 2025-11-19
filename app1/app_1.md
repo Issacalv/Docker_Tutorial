@@ -9,6 +9,8 @@ This guide walks through:
 - Removing all containers  
 - Example outputs  
 
+This guide assumes you have Docker Desktop running in the background
+
 ## Project Structure
 
 ```
